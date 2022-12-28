@@ -31,8 +31,10 @@ auto mint_command(cbdc::client& client, const std::vector<std::string>& args)
     const auto n_outputs = std::stoull(args[5]);
     const auto output_val = std::stoul(args[6]);
 
-    std::cout << "Value of n_outputs: " << n_outputs << std::endl;
-    std::cout <<"Value of output_val" << output_val << std::endl;
+/* Edits by Sabir */
+    std::cout << "Value of n_outputs (Number of UXTO) : " << n_outputs << std::endl;
+    std::cout <<"Value of output_val (Value of UXTO) : " << output_val << std::endl;
+/* Edits by Sabir */
 
     const auto mint_tx
         = client.mint(n_outputs, static_cast<uint32_t>(output_val));
