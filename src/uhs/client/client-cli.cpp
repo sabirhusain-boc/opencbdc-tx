@@ -31,6 +31,9 @@ auto mint_command(cbdc::client& client, const std::vector<std::string>& args)
     const auto n_outputs = std::stoull(args[5]);
     const auto output_val = std::stoul(args[6]);
 
+    std::cout << "Value of n_outputs: " << n_outputs << std::endl;
+    std::cout <<"Value of output_val" << output_val << std::endl;
+
     const auto mint_tx
         = client.mint(n_outputs, static_cast<uint32_t>(output_val));
     std::cout << cbdc::to_string(cbdc::transaction::tx_id(mint_tx))
